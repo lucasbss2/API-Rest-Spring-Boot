@@ -28,7 +28,7 @@ Será necessário um cliente HTTP, como por exemplo o Postman ou o Insomnia.
    
    Para realizar o registro, faça um POST seguinte endpoint: https://faint-margit-thatsmyself-81229139.koyeb.app/auth/register e insira um objeto no body da requisição: {"username":"seu_username","password:sua_senha"}. Este método gerará uma password hashada.  A password gerada será usada no próximo passo.
    
-   Para realizar o login, faça outro POST no seguinte endpoint: https://faint-margit-thatsmyself-81229139.koyeb.app/auth/login e agora utilize {"username": "o mesmo do registro", "password": "a senha hashada gerada pelo registro"}. Isso irá retornar um token que irá durar 24h para utilizar o CRUD da API.
+   Para realizar o login, faça outro POST no seguinte endpoint: https://faint-margit-thatsmyself-81229139.koyeb.app/auth/login e agora utilize {"username": "o mesmo do registro", "password": "o hash da password gerada pelo registro"}. Isso irá retornar um token que irá durar 24h para utilizar o CRUD da API.
 
 2) Interação com a API:
 
