@@ -16,6 +16,12 @@ As tecnologias utilizadas nesse projeto foram:
 
 A URL base dessa API é: https://faint-margit-thatsmyself-81229139.koyeb.app/
 
+O desenvolvimento dessa API foi feito em Arquitetura em Camadas:
+   - Controller: Recebe as requisições HTTP e faz o roteamento;
+   - Serviço: Abriga a lógica de negócio principal da aplicação;
+   - Persistência: Comunica-se diretamente com o PostgreSQL;
+   - Segurança: Faz o gerenciamento de autenticação e autorização via JWT (JSON Web Token).
+
 Como se conectar e interagir com a API?
 
 Será necessário um cliente HTTP, como por exemplo o Postman ou o Insomnia.
