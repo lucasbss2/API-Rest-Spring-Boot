@@ -14,7 +14,7 @@ As tecnologias utilizadas nesse projeto foram:
 
 - *Build: Maven*; 
 
-A URL base dessa API é: https://faint-margit-thatsmyself-81229139.koyeb.app/
+A URL base dessa API é: https://upset-nickie-thatsmyself-3d97e717.koyeb.app/
 
 Como se conectar e interagir com a API?
 
@@ -26,15 +26,15 @@ Será necessário um cliente HTTP, como por exemplo o Postman ou o Insomnia.
    
    O fluxo de autenticação segue o padrão: registro, login e token.
    
-   Para realizar o registro, faça um POST seguinte endpoint: https://faint-margit-thatsmyself-81229139.koyeb.app/auth/register e insira um objeto no body da requisição: {"username":"seu_username","password:sua_senha"}. Este método gerará uma password hashada.  A password gerada será usada no próximo passo.
+   Para realizar o registro, faça um POST seguinte endpoint: https://upset-nickie-thatsmyself-3d97e717.koyeb.app/auth/register e insira um objeto no body da requisição: {"username":"seu_username","password:sua_senha"}. Este método gerará uma password hashada.  A password gerada será usada no próximo passo.
    
-   Para realizar o login, faça outro POST no seguinte endpoint: https://faint-margit-thatsmyself-81229139.koyeb.app/auth/login e agora utilize {"username": "o mesmo do registro", "password": "o hash da password gerada pelo registro"}. Isso irá retornar um token que irá durar 24h para utilizar o CRUD da API.
+   Para realizar o login, faça outro POST no seguinte endpoint: https://upset-nickie-thatsmyself-3d97e717.koyeb.app/auth/login e agora utilize {"username": "o mesmo do registro", "password": "o hash da password gerada pelo registro"}. Isso irá retornar um token que irá durar 24h para utilizar o CRUD da API.
 
 2) Interação com a API:
 
    É importante ressaltar que, como a API usa o JWT, será necessário fazer uma alteração em Authorization. O Auth Type deverá ser Bearer Token e o Bearer Token é o token que foi gerado a partir do login.
 
-   Com a Authorization em Auth Type e o Bearer Token devidamente fornecido, o endpoint usado para fazer o CRUD dessa api é: https://faint-margit-thatsmyself-81229139.koyeb.app/api/products .
+   Com a Authorization em Auth Type e o Bearer Token devidamente fornecido, o endpoint usado para fazer o CRUD dessa api é: https://upset-nickie-thatsmyself-3d97e717.koyeb.app/api/products .
 
    Nessa API os métodos disponíveis para requisições são GET, POST e DELETE.
 
