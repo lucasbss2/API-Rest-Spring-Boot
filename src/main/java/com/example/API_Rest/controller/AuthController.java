@@ -1,6 +1,8 @@
 package com.example.API_Rest.controller;
 
 
+import com.example.API_Rest.dto.LoginRequest;
+import com.example.API_Rest.dto.RegisterRequest;
 import com.example.API_Rest.model.User;
 import com.example.API_Rest.security.JwtUtil;
 import com.example.API_Rest.service.UserService;
@@ -23,15 +25,15 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> register(@RequestBody Map<String, String> request) {
-        User user = userService.registerUser(request.get("username"), request.get("password"));
+    public ResponseEntity<?> register(@RequestBody RegisterRequest request) {
+        User user = userService.registerUser(request.getUsername(), request.getPassword());
         return ResponseEntity.ok(user);
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody Map<String, String> request) {
-        Optional<User> usuario = userService.searchByUsername(request.get("username"));
-        if (usuario.isPresent() && usuario.get().getPassword().equals(request.get("password"))) {
+    public ResponseEntity<?> login(@RequestBody LoginRequest request) {
+        Optional<User> usuario = userService.searchByUsername(request.getUsername());
+        if (usuario.isPresent() && usuario.get().getPassword().equals(request.getPassword())) {
             String token = JwtUtil.generateToken(usuario.get().getUsername());
             return ResponseEntity.ok(Map.of("token", token));
         }
